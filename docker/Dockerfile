@@ -7,7 +7,7 @@ RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
     gdb git wget autoconf automake nano vim tmux curl \
     python3-dev python3-pip python3-scipy python3-matplotlib
 
-RUN pip3 install --break-system-packages jupyter fiftyone requests unidecode tiktoken orjson
+RUN pip3 install --break-system-packages --ignore-installed psutil jupyter fiftyone requests unidecode tiktoken orjson
 
 WORKDIR /colcon_ws/src/vlm_gist
 
